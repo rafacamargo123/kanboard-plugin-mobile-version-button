@@ -34,5 +34,8 @@ MobileVersionButton.prototype.toggle = function() {
     localStorage.setItem('mobile-view', (self.isMobile() ? '0' : '1'));
 };
 
-var _mobileVersionButton = new MobileVersionButton();
-_mobileVersionButton.execute();
+// run only if jQuery is available
+if (typeof $ != 'undefined') {
+    var _mobileVersionButton = new MobileVersionButton();
+    _mobileVersionButton.execute();
+}
